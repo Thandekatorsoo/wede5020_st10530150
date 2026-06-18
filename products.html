@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>products - Cotton On</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
+        <img src="images/cottonOn.png" alt="Logo" width="150" height="50">
         <h1>Products</h1>
         <nav>
             <ul>
@@ -22,7 +23,9 @@
         </nav>
     </header>
 
+
     <main>
+
         <section id="products and services">
             <h2>Our Products</h2>
             <p>Cottton On is global fashion retailer offering affordable,casual, clothing,loungewear, sleepwear,
@@ -38,6 +41,20 @@
             <p>Typo offers stationery, gifts, and home decor focusing on fun and creativity.</p>
             <p>accessories include bags, hats, scarves, belts, socks, sunglassses and jewelry.</p>
 
+            <input type="text" id="search" placeholder="Search products...">
+
+            <script>
+                document.getElementById("search").addEventListener("keyup", function () {
+                    let filter = this.value.toLowerCase();
+                    let products = document.querySelectorAll(".product-list div");
+                    products.forEach(product => {
+                        let text = product.innerText.toLowerCase();
+                        product.style.display = text.includes(filter) ? "" : "none";
+                    });
+                });
+            </script>
+
+
             <!--Product teaser-->
             <section id="products">
                 <h2>Our Products</h2>
@@ -45,14 +62,21 @@
                 <div class="product-list">
                     <!-- Product items  -->
                     <div>
-                        <img src="images/denim.jpg" alt="Denim Jeans" width="200" height="200"> <img>
+                        <img src="images/denim.jpg" alt="Denim Jeans" width="200" height="200"
+                            onclick="openLightbox(this)">
+                        <div id="lightbox" style="display:none;">
+                            <span id="close" onclick="closeLightbox()">&times;</span>
+                            <img id="lightbox-img" src="" alt="">
+                        </div>
+
 
                         <h3>Denim Jeans</h3>
                         <p>90% cotton rich quality denim wide leg</p>
                         <p class="price">
                             R799.99</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('Denim Jeans', 799.99)">Add to Cart</button>
+
                     </div>
 
                     <div>
@@ -63,7 +87,7 @@
                         <p class="price">
                             R499.99</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('Long Sleeve Shirt', 499.99)">Add to Cart</button>
                     </div>
 
                     <div>
@@ -74,7 +98,7 @@
                         <p class="price">
                             R399.99</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('Fleece Hoodie', 399.99)">Add to Cart</button>
                     </div>
 
                     <div>
@@ -85,7 +109,7 @@
                         <p class="price">
                             R599.99</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('Dresses', 599.99)">Add to Cart</button>
                     </div>
 
                     <div>
@@ -96,7 +120,7 @@
                         <p class="price">
                             R450.00</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('Skirt', 450.00)">Add to Cart</button>
                     </div>
 
                     <div>
@@ -108,7 +132,7 @@
                         <p class="price">
                             R599.99</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('pyjama', 599.99)">Add to Cart</button>
                     </div>
 
                     <div>
@@ -119,7 +143,7 @@
                         <p class="price">
                             R500.00</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('flip flop kitten heels', 500.00)">Add to Cart</button>
                     </div>
 
                     <div>
@@ -131,7 +155,7 @@
                         <p class="price">
                             R450.00</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('sweatshirt', 450.00)">Add to Cart</button>
                     </div>
 
                     <div>
@@ -142,7 +166,7 @@
                         <p class="price">
                             R200.00</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('Modern cropped graphic tee', 200.00)">Add to Cart</button>
                     </div>
 
 
@@ -154,7 +178,7 @@
                         <p class="price">
                             R960.00</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('pants', 960.00)">Add to Cart</button>
                     </div>
 
 
@@ -167,7 +191,7 @@
                         <p class="price">
                             R599.99</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('shorts', 599.00)">Add to Cart</button>
                     </div>
 
 
@@ -179,7 +203,7 @@
                         <p class="price">
                             R850.00</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('Jacket', 850.00)">Add to Cart</button>
                     </div>
 
                     <div>
@@ -190,7 +214,7 @@
                         <p class="price">
                             R599.99</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('slides', 5990.00)">Add to Cart</button>
                     </div>
 
                     <div>
@@ -203,7 +227,7 @@
                         <p class="price">
                             R160.00</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('T-Shirt', 160.00)">Add to Cart</button>
                     </div>
 
                     <div>
@@ -214,7 +238,7 @@
                         <p class="price">
                             R399.99</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('Pants', 399.00)">Add to Cart</button>
                     </div>
 
 
@@ -226,7 +250,7 @@
                         <p class="price">
                             R200.00</p>
                         </p>
-                        <button onclick="joinNow()">Add to Cart</button>
+                        <button onclick="joinNow('Dress', 200.00)">Add to Cart</button>
 
 
                         <div>
@@ -237,7 +261,7 @@
                             <p class="price">
                                 R250.00</p>
                             </p>
-                            <button onclick="joinNow()">Add to Cart</button>
+                            <button onclick="joinNow('slides', 250.00)">Add to Cart</button>
 
 
                             <div>
@@ -248,7 +272,7 @@
                                 <p class="price">
                                     R160.00</p>
                                 </p>
-                                <button onclick="joinNow()">Add to Cart</button>
+                                <button onclick="joinNow('Boy T-shirt', 1600.00)">Add to Cart</button>
                             </div>
 
                             <div>
@@ -259,7 +283,7 @@
                                 <p class="price">
                                     R399.99</p>
                                 </p>
-                                <button onclick="joinNow()">Add to Cart</button>
+                                <button onclick="joinNow('Boy Pants', 399.00)">Add to Cart</button>
                             </div>
 
 
@@ -271,7 +295,7 @@
                                 <p class="price">
                                     R169.99</p>
                                 </p>
-                                <button onclick="joinNow()">Add to Cart</button>
+                                <button onclick="joinNow('Boy shorts ', 169.00)">Add to Cart</button>
 
 
                                 <div>
@@ -282,7 +306,7 @@
                                     <p class="price">
                                         R250.00</p>
                                     </p>
-                                    <button onclick="joinNow()">Add to Cart</button>
+                                    <button onclick="joinNow('Blue sandles', 250.00)">Add to Cart</button>
 
 
                                     <div>
@@ -294,7 +318,7 @@
                                         <p class="price">
                                             R300.00</p>
                                         </p>
-                                        <button onclick="joinNow()">Add to Cart</button>
+                                        <button onclick="joinNow('Handbag', 300.00)">Add to Cart</button>
 
 
                                         <div>
@@ -305,7 +329,7 @@
                                             <p class="price">
                                                 R100.00</p>
                                             </p>
-                                            <button onclick="joinNow()">Add to Cart</button>
+                                            <button onclick="joinNow('earrings', 100.00)">Add to Cart</button>
 
 
                                             <div>
@@ -318,7 +342,7 @@
                                                     R70.00</p>
                                                 </p>
 
-                                                <button onclick="joinNow()">Add to Cart</button>
+                                                <button onclick="joinNow('Socks', 70.00)">Add to Cart</button>
 
 
 
@@ -332,7 +356,7 @@
                                                         R90.00</p>
                                                     </p>
 
-                                                    <button onclick="joinNow()">Add to Cart</button>
+                                                    <button onclick="joinNow('Cap', 90.00)">Add to Cart</button>
 
 
                                                     <div>
@@ -344,7 +368,8 @@
                                                         <p class="price">
                                                             R150.00</p>
                                                         </p>
-                                                        <button onclick="joinNow()">Add to Cart</button>
+                                                        <button onclick="joinNow('sunglasses', 150.00)">Add to
+                                                            Cart</button>
 
 
                                                         <div>
@@ -380,6 +405,7 @@
                                                                 gift
                                                                 tems</p>
             </section>
+
     </main>
 
 
@@ -388,8 +414,31 @@
 
     <footer>
         <p>&copy; 2026 Cotton On Website.</p>
-        <p>Email: customerenquiries@cottonon.zendesk.com | Telephone: +27 87 550 43830</p>
+        <p>Email: customerenquiries@cottonon.zendesk.com | Telephone: +27 87 550 4830</p>
     </footer>
+    <script>
+        let cart = [];
+
+        function joinNow(productName, price) {
+            cart.push({ name: productName, price: price });
+            alert(productName + " added to cart! 🛍️");
+            console.log(cart); // For debugging
+        }
+    </script>
+
+    <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+
+
 </body>
 
 </html>

@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact us</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <input type="text" id="search" placeholder="Search products...">
+
+
     <header>
+        <img src="images/cottonOn.png" alt="Logo" width="150" height="50">
+        <h1>Cotton On</h1>
         <h1>Contact Us</h1>
         <nav>
             <ul>
@@ -22,20 +28,44 @@
     </header>
     <main>
 
-        <section id="contact-info">
-            <h2>Contact Information</h2>
-            <p>Email: customerenquiries@cottonon.zendesk.com</p>
-            <p>Phone: +27 87 550 43830</p>
-            <p>Address: South Africa Thabo Sehume st. Pretoria Central Pretoria 0002
-                /johannesburg East Gate Mall , Rosebank Mall</p>
-            <map name="355 Thabo Sehume Street, Pretoria Suburbs, City of Tshwane, 0002, South Africa"></map>
-            </p>
+
+        <!---------------Contact Information----------------->
+
+        <script src="js/index.js"></script>
+        <h2>Contact Information</h2>
+        <p>Email: customerenquiries@cottonon.zendesk.com</p>
+        <p>Phone: +27 87 550 4830</p>
+        <p>Address: South Africa Thabo Sehume st. Pretoria Central Pretoria 0002
+            /johannesburg East Gate Mall , Rosebank Mall</p>
+        <map name="355 Thabo Sehume Street, Pretoria Suburbs, City of Tshwane, 0002, South Africa"></map>
+        </p>
 
         </section>
     </main>
     <footer>
         <p>&copy; 2026 Cotton On.</p>
     </footer>
+    <script>
+        function validateForm(event) {
+            let name = document.getElementById("full_name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if (!name || !email || !message) {
+                alert("Please fill in all required fields.");
+                event.preventDefault();
+            } else if (!email.includes("@")) {
+                alert("Please enter a valid email address.");
+                event.preventDefault();
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let form = document.querySelector("form");
+            if (form) form.addEventListener("submit", validateForm);
+        });
+    </script>
+
 
 </body>
 

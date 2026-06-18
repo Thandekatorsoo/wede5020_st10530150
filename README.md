@@ -30,3 +30,9 @@ accessories women socks https://cottonon.com/ZA/body-mid-crew-socks-3pk/6337461-
  men glasses https://cottonon.com/ZA/the-visionary-sunglasses/3613512-01.html?dwvar_3613512-01_color=3613512-01&cgid=mens-sunglasses&originalPid=3613512-01#start=1&sz=60
  women sunglasses https://cottonon.com/ZA/ashlyn-slim-line-sunglasses/4594510-02.html?dwvar_4594510-02_color=4594510-02&cgid=womens-sunglasses&originalPid=4594510-02#start=1&sz=60
  
+since my infomation about the vision and mission of the business had less information ,i added more as required. i also added the logo on all my html pages for credibility. I also added comments on my html. also on "our story" under the about us page i added more information.
+
+responsive images:
+![alt text](mobile.png)
+![alt text](laptop.png)
+![alt text](tablet.png)
