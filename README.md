@@ -1,5 +1,6 @@
 # wede5020_st10530150
 web development project
+<<<<<<< HEAD
 
 DENIM JEANS https://cottonon.com/ZA/petite-low-rise-wide-jean/2061068-05.html?dwvar_2061068-05_color=2061068-05&cgid=womens-jeans&originalPid=2061068-05#start=4&sz=60
 Long Sleeve https://cottonon.com/ZA/e/2061297-01.html?dwvar_2061297-01_color=2061297-01&cgid=womens-tops&originalPid=2061297-01#start=1&sz=60
@@ -36,3 +37,5 @@ responsive images:
 ![alt text](mobile.png)
 ![alt text](laptop.png)
 ![alt text](tablet.png)
+=======
+>>>>>>> 177f7852632051651676d43f96a0d3d41de8e281
