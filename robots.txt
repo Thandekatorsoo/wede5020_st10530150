@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /private/
+
+Sitemap: https://thandekatorsoo.github.io/wede5020_st10530150/sitemap.xml
+
